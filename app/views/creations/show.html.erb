@@ -1,0 +1,43 @@
+<%= javascript_tag do %>
+  window.cPieces = <%= raw ContentPiece.all.to_json %>
+  window.slide_list = <%= raw @creation.slides.split(',').to_json %>
+<% end %>
+
+<%= render 'player' %>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Slides:</b>
+  <%= @creation.slides %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @creation.author %>
+</p>
+
+<p>
+  <b>Created time:</b>
+  <%= @creation.created_time %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @creation.title %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%= @creation.id %>
+</p>
+
+<p>
+  <b>Uploaded content group:</b>
+  <%= @creation.uploaded_content_group_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_creation_path(@creation) %> |
+<%= link_to 'Back', creations_path %>

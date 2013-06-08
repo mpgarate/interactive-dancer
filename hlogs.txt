@@ -1,0 +1,102 @@
+2013-06-08T14:17:07.911871+00:00 app[web.1]: Processing by CreationsController#index as HTML
+2013-06-08T14:17:07.925254+00:00 app[web.1]: 
+2013-06-08T14:17:07.922977+00:00 app[web.1]: Completed 500 Internal Server Error in 4ms
+2013-06-08T14:17:07.925254+00:00 app[web.1]:              WHERE a.attrelid = '"creations"'::regclass
+2013-06-08T14:17:07.925254+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "creations" does not exist
+2013-06-08T14:17:07.925254+00:00 app[web.1]:                                         ^
+2013-06-08T14:17:07.925254+00:00 app[web.1]: :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2013-06-08T14:17:07.925254+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2013-06-08T14:17:07.925438+00:00 app[web.1]:              ORDER BY a.attnum
+2013-06-08T14:17:07.925254+00:00 app[web.1]: LINE 5:              WHERE a.attrelid = '"creations"'::regclass
+2013-06-08T14:17:07.925254+00:00 app[web.1]:                AND a.attnum > 0 AND NOT a.attisdropped
+2013-06-08T14:17:07.925254+00:00 app[web.1]:               FROM pg_attribute a LEFT JOIN pg_attrdef d
+2013-06-08T14:17:07.925254+00:00 app[web.1]:                 ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2013-06-08T14:17:07.925438+00:00 app[web.1]: ):
+2013-06-08T14:17:07.925438+00:00 app[web.1]: 
+2013-06-08T14:17:07.925438+00:00 app[web.1]:   app/controllers/creations_controller.rb:6:in `index'
+2013-06-08T14:17:07.925438+00:00 app[web.1]: 
+2013-06-08T14:17:07.931372+00:00 heroku[router]: at=info method=GET path=/creations host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=10ms service=38ms status=500 bytes=643
+2013-06-08T14:30:49.821291+00:00 heroku[slugc]: Slug compilation started
+2013-06-08T14:31:15.490667+00:00 heroku[router]: at=info code=H16 desc="herokuapp redirect" method=GET path=/ host=daytes-dancer.heroku.com fwd="108.48.115.7" dyno= connect= service= status=301 bytes=
+2013-06-08T14:31:15.612107+00:00 app[web.1]: Started GET "/" for 108.48.115.7 at 2013-06-08 14:31:15 +0000
+2013-06-08T14:31:15.615256+00:00 app[web.1]: Processing by HomeController#index as HTML
+2013-06-08T14:31:15.617812+00:00 app[web.1]:   Rendered home/index.html.erb within layouts/application (0.5ms)
+2013-06-08T14:31:15.618801+00:00 app[web.1]: Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+2013-06-08T14:31:15.619884+00:00 heroku[router]: at=info method=GET path=/ host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=35ms service=19ms status=304 bytes=0
+2013-06-08T14:31:15.826334+00:00 heroku[router]: at=info method=GET path=/assets/application-ac31e68a1540407beb599bb0a3286be7.css host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=1ms service=9ms status=304 bytes=0
+2013-06-08T14:31:15.834387+00:00 heroku[router]: at=info method=GET path=/assets/application-451fad6f1b9d27158ece8eda1b6ea3e3.js host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=5ms service=9ms status=304 bytes=0
+2013-06-08T14:31:16.053006+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=2ms service=6ms status=304 bytes=0
+2013-06-08T14:31:18.938941+00:00 heroku[router]: at=info method=GET path=/creations host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=5ms service=18ms status=500 bytes=643
+2013-06-08T14:31:18.935907+00:00 app[web.1]: Completed 500 Internal Server Error in 3ms
+2013-06-08T14:31:18.929757+00:00 app[web.1]: Started GET "/creations" for 108.48.115.7 at 2013-06-08 14:31:18 +0000
+2013-06-08T14:31:18.937721+00:00 app[web.1]: :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2013-06-08T14:31:18.937721+00:00 app[web.1]:                 ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2013-06-08T14:31:18.932710+00:00 app[web.1]: Processing by CreationsController#index as HTML
+2013-06-08T14:31:18.937721+00:00 app[web.1]:              WHERE a.attrelid = '"creations"'::regclass
+2013-06-08T14:31:18.937721+00:00 app[web.1]: 
+2013-06-08T14:31:18.938029+00:00 app[web.1]: 
+2013-06-08T14:31:18.938029+00:00 app[web.1]:   app/controllers/creations_controller.rb:6:in `index'
+2013-06-08T14:31:18.938029+00:00 app[web.1]: 
+2013-06-08T14:31:18.937721+00:00 app[web.1]: LINE 5:              WHERE a.attrelid = '"creations"'::regclass
+2013-06-08T14:31:18.937721+00:00 app[web.1]:                                         ^
+2013-06-08T14:31:18.937721+00:00 app[web.1]:                AND a.attnum > 0 AND NOT a.attisdropped
+2013-06-08T14:31:18.938029+00:00 app[web.1]:              ORDER BY a.attnum
+2013-06-08T14:31:18.938029+00:00 app[web.1]: ):
+2013-06-08T14:31:18.937721+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "creations" does not exist
+2013-06-08T14:31:18.937721+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2013-06-08T14:31:18.937721+00:00 app[web.1]:               FROM pg_attribute a LEFT JOIN pg_attrdef d
+2013-06-08T14:31:21.168552+00:00 heroku[router]: at=info method=GET path=/dancer.mp3 host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=1ms service=5ms status=304 bytes=0
+2013-06-08T14:31:45.986113+00:00 heroku[api]: Deploy f1d39d2 by mpgarate@gmail.com
+2013-06-08T14:31:46.006837+00:00 heroku[api]: Release v7 created by mpgarate@gmail.com
+2013-06-08T14:31:46.049365+00:00 heroku[api]: Deploy f1d39d2 by mpgarate@gmail.com
+2013-06-08T14:31:46.149258+00:00 heroku[web.1]: State changed from up to starting
+2013-06-08T14:31:46.567833+00:00 heroku[slugc]: Slug compilation finished
+2013-06-08T14:31:49.132466+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2013-06-08T14:31:49.843115+00:00 app[web.1]: 	/usr/local/lib/ruby/1.9.1/webrick/server.rb:90:in `select'
+2013-06-08T14:31:49.843115+00:00 app[web.1]: [2013-06-08 14:31:49] ERROR SignalException: SIGTERM
+2013-06-08T14:31:50.126149+00:00 heroku[web.1]: Starting process with command `bundle exec rails server -p 41040`
+2013-06-08T14:31:53.542036+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-06-08T14:31:53.541945+00:00 app[web.1]: DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins! Support for these plugins will be removed in Rails 4.0. Move them out and bundle them in your Gemfile, or fold them in to your app as lib/myplugin/* and config/initializers/myplugin.rb. See the release notes for more on this: http://weblog.rubyonrails.org/2012/1/4/rails-3-2-0-rc2-has-been-released. (called from <top (required)> at /app/config/environment.rb:5)
+2013-06-08T14:31:56.082362+00:00 app[web.1]: Connecting to database specified by DATABASE_URL
+2013-06-08T14:31:56.082362+00:00 app[web.1]: => Booting WEBrick
+2013-06-08T14:31:56.082362+00:00 app[web.1]: => Rails 3.2.13 application starting in production on http://0.0.0.0:41040
+2013-06-08T14:31:56.082362+00:00 app[web.1]: => Call with -d to detach
+2013-06-08T14:31:56.082362+00:00 app[web.1]: => Ctrl-C to shutdown server
+2013-06-08T14:31:56.236372+00:00 app[web.1]: [2013-06-08 14:31:56] INFO  WEBrick::HTTPServer#start: pid=2 port=41040
+2013-06-08T14:31:56.235978+00:00 app[web.1]: [2013-06-08 14:31:56] INFO  ruby 1.9.2 (2011-07-09) [x86_64-linux]
+2013-06-08T14:31:56.235978+00:00 app[web.1]: [2013-06-08 14:31:56] INFO  WEBrick 1.3.1
+2013-06-08T14:31:56.468833+00:00 heroku[web.1]: State changed from starting to up
+2013-06-08T14:31:57.076358+00:00 app[web.1]: Started GET "/" for 108.48.115.7 at 2013-06-08 14:31:57 +0000
+2013-06-08T14:31:57.255913+00:00 app[web.1]: Processing by
+ HomeController#index as HTML
+2013-06-08T14:31:57.604875+00:00 app[web.1]:   Rendered home/index.html.erb within layouts/application (31.6ms)
+2013-06-08T14:31:57.616395+00:00 app[web.1]: Completed 200 OK in 360ms (Views: 359.6ms | ActiveRecord: 0.0ms)
+2013-06-08T14:31:57.615929+00:00 heroku[router]: at=info method=GET path=/ host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=2ms service=594ms status=200 bytes=554
+2013-06-08T14:31:57.743475+00:00 heroku[router]: at=info method=GET path=/assets/application-aaddbcc3d90bc57468d6a808aaf7bafa.css host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=1ms service=8ms status=200 bytes=1729
+2013-06-08T14:31:58.611336+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2013-06-08T14:31:58.611203+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2013-06-08T14:31:58.627640+00:00 app[web.1]: Started GET "/" for 108.48.115.7 at 2013-06-08 14:31:58 +0000
+2013-06-08T14:31:58.701039+00:00 app[web.1]: Processing by HomeController#index as HTML
+2013-06-08T14:31:58.702218+00:00 app[web.1]:   Rendered home/index.html.erb within layouts/application (0.5ms)
+2013-06-08T14:31:58.724072+00:00 app[web.1]: Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+2013-06-08T14:31:58.847160+00:00 heroku[router]: at=info method=GET path=/ host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=1ms service=912ms status=200 bytes=554
+2013-06-08T14:31:58.851018+00:00 app[web.1]: Processing by CreationsController#index as HTML
+2013-06-08T14:31:58.847040+00:00 app[web.1]: Started GET "/creations" for 108.48.115.7 at 2013-06-08 14:31:58 +0000
+2013-06-08T14:31:59.165603+00:00 app[web.1]: Completed 500 Internal Server Error in 309ms
+2013-06-08T14:31:59.191309+00:00 app[web.1]: LINE 5:              WHERE a.attrelid = '"creations"'::regclass
+2013-06-08T14:31:59.191309+00:00 app[web.1]:                                         ^
+2013-06-08T14:31:59.191309+00:00 app[web.1]:               FROM pg_attribute a LEFT JOIN pg_attrdef d
+2013-06-08T14:31:59.191309+00:00 app[web.1]: 
+2013-06-08T14:31:59.191309+00:00 app[web.1]:                 ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2013-06-08T14:31:59.191309+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "creations" does not exist
+2013-06-08T14:31:59.191309+00:00 app[web.1]:                AND a.attnum > 0 AND NOT a.attisdropped
+2013-06-08T14:31:59.191537+00:00 app[web.1]:              ORDER BY a.attnum
+2013-06-08T14:31:59.191309+00:00 app[web.1]:              WHERE a.attrelid = '"creations"'::regclass
+2013-06-08T14:31:59.191537+00:00 app[web.1]:   app/controllers/creations_controller.rb:6:in `index'
+2013-06-08T14:31:59.191309+00:00 app[web.1]: :             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2013-06-08T14:31:59.191309+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2013-06-08T14:31:59.191537+00:00 app[web.1]: ):
+2013-06-08T14:31:59.191537+00:00 app[web.1]: 
+2013-06-08T14:31:59.191537+00:00 app[web.1]: 
+2013-06-08T14:31:59.769958+00:00 heroku[router]: at=info method=GET path=/dancer.mp3 host=daytes-dancer.herokuapp.com fwd="108.48.115.7" dyno=web.1 connect=1ms service=1941ms status=206 bytes=10523264
+2013-06-08T14:32:00.646413+00:00 heroku[web.1]: Process exited with status 137

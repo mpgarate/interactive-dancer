@@ -1,0 +1,12 @@
+<%= javascript_tag do %>
+  window.cPieces = <%= raw ContentPiece.all.to_json %>
+  window.slide_list = <%= [].to_json %>
+<% end %>
+
+<%= render 'player' %>
+
+<h1>New creation</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', creations_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Render thumbnail:</b>
+</p>
+<p>
+  <%= image_tag(@content_piece.thumb_url, :alt => "DAYTES #{@content_piece.id}") %>
+</p>
+<p>
+  <b>Url:</b>
+  <%= @content_piece.url %>
+</p>
+<p>
+  <b>Thumbnail Url:</b>
+  <%= @content_piece.thumb_url %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%= @content_piece.format %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%= @content_piece.id %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_piece_path(@content_piece) %> |
+<%= link_to 'Back', content_pieces_path %>

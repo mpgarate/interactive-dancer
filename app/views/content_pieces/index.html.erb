@@ -1,0 +1,29 @@
+<h1>Listing content_pieces</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Thumb URL</th>
+    <th>Format</th>
+    <th>Id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @content_pieces.each do |content_piece| %>
+  <tr>
+    <td><%= content_piece.url %></td>
+    <td><%= content_piece.thumb_url %></td>
+    <td><%= content_piece.format %></td>
+    <td><%= content_piece.id %></td>
+    <td><%= link_to 'Show', content_piece %></td>
+    <td><%= link_to 'Edit', edit_content_piece_path(content_piece) %></td>
+    <td><%= link_to 'Destroy', content_piece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Content piece', new_content_piece_path %>

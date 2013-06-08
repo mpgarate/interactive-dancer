@@ -1,0 +1,19 @@
+<div id="feature">
+  <% ContentPiece.all.each do |piece| %>
+  <%= insert_piece(piece) %>
+  <% end %>
+</div>
+<div class="bar progress">
+  <div class="slider"></div>
+</div>
+<div id="filmstrip"></div>
+<div class="song progress">
+  <div class="slider"></div>
+</div>
+<div id="grid">
+
+  <% ContentPiece.all.each do |piece| %>
+    <%= image_tag(piece.thumb_url, :alt => "DAYTES #{piece.id}", :class => "thumb thumb_#{piece.id}", data: {pieceid: piece.id}) %>
+  <% end %>
+</div> <!-- grid -->
+<div id="audio_time">0, 0</div>

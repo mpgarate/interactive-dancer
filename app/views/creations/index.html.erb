@@ -1,0 +1,33 @@
+<h1>Listing creations</h1>
+
+<table>
+  <tr>
+    <th>Slides</th>
+    <th>Author</th>
+    <th>Created time</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Uploaded content group</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @creations.each do |creation| %>
+  <tr>
+    <td><%= creation.slides %></td>
+    <td><%= creation.author %></td>
+    <td><%= creation.created_time %></td>
+    <td><%= creation.title %></td>
+    <td><%= creation.id %></td>
+    <td><%= creation.uploaded_content_group_id %></td>
+    <td><%= link_to 'Show', creation %></td>
+    <td><%= link_to 'Edit', edit_creation_path(creation) %></td>
+    <td><%= link_to 'Destroy', creation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Creation', new_creation_path %>

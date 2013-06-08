@@ -1,0 +1,90 @@
+html{
+  background:#222;
+  color: #fefefe;
+}
+#feature{
+  height:400px;
+  width:600px;
+  margin: 0 auto;
+  box-shadow: 0 0 100px #ccc;
+  background-size: contain;
+  background:transparent;
+  z-index: 3;
+}
+
+.inner_feature{
+  height:400px;
+  width:600px;
+}
+
+.top_feat{
+  display:block;
+  z-index: 10;
+  margin-left:0;
+}
+
+.hidden{
+  margin-left:-10000px;
+  position:absolute;
+}
+
+form.new_creation{
+  display:none;
+}
+.song.progress{
+  margin: 0 auto 0;
+  border-top:0;
+  border-bottom:1px solid #444;
+}
+.song .slider{
+  background: blue;
+}
+.progress{
+  height:4px;
+  width: 600px;
+  margin: 20px auto 0;
+  border:1px solid #444;
+  border-bottom: 0;
+  overflow:hidden;
+}
+.slider{
+  width:600px;
+  height:4px;
+  background: red;
+}
+#filmstrip{
+    height:40px;
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #444;
+    overflow:hidden;
+}
+#filmstrip .thumb{
+  width: 60px;
+  height: 40px;
+  float:left;
+  border:0;
+}
+
+#grid{
+  margin: 30px auto 0;
+  width:600px;
+  height:100px;
+}
+
+#grid .thumb{
+  height:100px;
+  width:150px;
+  float:left;
+  border:0;
+  padding:8px 0;
+}
+#grid .thumb:active{
+  padding-top:12px;
+  padding-bottom:4px;
+}
+
+#audio_time{
+	display:block;
+	clear:both;
+}
