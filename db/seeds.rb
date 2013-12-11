@@ -20,14 +20,8 @@ images = [
 
 images.each do |f|
 	piece = ContentPiece.new
-	piece.url = "app/assets/" + f
+	piece.url = "content_pieces/" + f
 	piece.format = 'img'
-	piece.thumb_url ='app/assets/thumbs/' + f
+	piece.thumb_url ='content_pieces/thumbs/' + f
 	piece.save!
 end
-
-	piece = ContentPiece.new
-	piece.url = "app/assets/india2.mp4"
-	piece.format = 'video'
-	piece.thumb_url ='app/assets/thumbs/india2.jpg'
-	piece.save!
