@@ -5,3 +5,29 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+images = [
+	'one.jpg',
+	'two.jpg',
+	'three.jpg',
+	'four.jpg',
+	'five.jpg',
+	'six.jpg',
+	'seven.jpg',
+	'eight.jpg',
+	'nine.jpg',
+]
+
+images.each do |f|
+	piece = ContentPiece.new
+	piece.url = "app/assets/" + f
+	piece.format = 'img'
+	piece.thumb_url ='app/assets/thumbs/' + f
+	piece.save!
+end
+
+	piece = ContentPiece.new
+	piece.url = "app/assets/india2.mp4"
+	piece.format = 'video'
+	piece.thumb_url ='app/assets/thumbs/india2.jpg'
+	piece.save!
