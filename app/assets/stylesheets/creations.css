@@ -88,3 +88,9 @@ form.new_creation{
 	display:block;
 	clear:both;
 }
+
+.welcome-message{
+  text-align:center;
+  font-size:18px;
+  padding-top:40px;
+}
